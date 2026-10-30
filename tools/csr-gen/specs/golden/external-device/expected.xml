@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:csrgen="http://csr-gen.dev/ipxact/1.0" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
+  <ipxact:vendor>csr-gen</ipxact:vendor>
+  <ipxact:library>generated</ipxact:library>
+  <ipxact:name>csr_registers</ipxact:name>
+  <ipxact:version>0.1</ipxact:version>
+  <ipxact:memoryMaps>
+    <ipxact:memoryMap>
+      <ipxact:name>csr_registers</ipxact:name>
+      <ipxact:description>CSR Registers</ipxact:description>
+      <ipxact:addressBlock>
+        <ipxact:name>csr_registers</ipxact:name>
+        <ipxact:baseAddress>'h0</ipxact:baseAddress>
+        <ipxact:range>'h53</ipxact:range>
+        <ipxact:width>32</ipxact:width>
+        <ipxact:usage>register</ipxact:usage>
+        <ipxact:register>
+          <ipxact:name>STATUS</ipxact:name>
+          <ipxact:description>Device ready flag</ipxact:description>
+          <ipxact:addressOffset>'h0</ipxact:addressOffset>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:field>
+            <ipxact:name>FLAG</ipxact:name>
+            <ipxact:description>Device ready flag</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>1</ipxact:bitWidth>
+            <ipxact:access>read-only</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+        <ipxact:register>
+          <ipxact:name>FIFO</ipxact:name>
+          <ipxact:description>FIFO payload</ipxact:description>
+          <ipxact:addressOffset>'h10</ipxact:addressOffset>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:vendorExtensions>
+            <csrgen:hwAccess>external</csrgen:hwAccess>
+          </ipxact:vendorExtensions>
+          <ipxact:field>
+            <ipxact:name>DATA</ipxact:name>
+            <ipxact:description>FIFO payload</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>8</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+          <ipxact:field>
+            <ipxact:name>LEVEL</ipxact:name>
+            <ipxact:description>FIFO fill level</ipxact:description>
+            <ipxact:bitOffset>8</ipxact:bitOffset>
+            <ipxact:bitWidth>8</ipxact:bitWidth>
+            <ipxact:access>read-only</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+        <ipxact:register>
+          <ipxact:name>MEM</ipxact:name>
+          <ipxact:description>External read/write memory window</ipxact:description>
+          <ipxact:addressOffset>'h20</ipxact:addressOffset>
+          <ipxact:dim>4</ipxact:dim>
+          <ipxact:dimIncrement>4</ipxact:dimIncrement>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:vendorExtensions>
+            <csrgen:hwAccess>external</csrgen:hwAccess>
+            <csrgen:addressEnd>'h2f</csrgen:addressEnd>
+          </ipxact:vendorExtensions>
+          <ipxact:field>
+            <ipxact:name>WINDOW</ipxact:name>
+            <ipxact:description>External read/write memory window</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>32</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+        <ipxact:register>
+          <ipxact:name>ROM</ipxact:name>
+          <ipxact:description>External read-only memory window</ipxact:description>
+          <ipxact:addressOffset>'h30</ipxact:addressOffset>
+          <ipxact:dim>4</ipxact:dim>
+          <ipxact:dimIncrement>4</ipxact:dimIncrement>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:vendorExtensions>
+            <csrgen:hwAccess>external</csrgen:hwAccess>
+            <csrgen:addressEnd>'h3f</csrgen:addressEnd>
+          </ipxact:vendorExtensions>
+          <ipxact:field>
+            <ipxact:name>IMAGE</ipxact:name>
+            <ipxact:description>External read-only memory window</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>32</ipxact:bitWidth>
+            <ipxact:access>read-only</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+        <ipxact:register>
+          <ipxact:name>WBUF</ipxact:name>
+          <ipxact:description>External write-only memory window</ipxact:description>
+          <ipxact:addressOffset>'h40</ipxact:addressOffset>
+          <ipxact:dim>4</ipxact:dim>
+          <ipxact:dimIncrement>4</ipxact:dimIncrement>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:vendorExtensions>
+            <csrgen:hwAccess>external</csrgen:hwAccess>
+            <csrgen:addressEnd>'h4f</csrgen:addressEnd>
+          </ipxact:vendorExtensions>
+          <ipxact:field>
+            <ipxact:name>BUFFER</ipxact:name>
+            <ipxact:description>External write-only memory window</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>32</ipxact:bitWidth>
+            <ipxact:access>write-only</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+      </ipxact:addressBlock>
+    </ipxact:memoryMap>
+  </ipxact:memoryMaps>
+</ipxact:component>

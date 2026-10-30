@@ -1,0 +1,10 @@
+simv
+simv.daidir
+csrc
+ucli.key
+vc_hdrs.h
+csr_registers.sv
+sim.log
+work/
+altera_lnsim_ver/
+*.log

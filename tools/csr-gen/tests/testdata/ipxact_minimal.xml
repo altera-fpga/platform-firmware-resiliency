@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ipxact:component xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
+  <ipxact:vendor>csr-gen</ipxact:vendor>
+  <ipxact:library>test</ipxact:library>
+  <ipxact:name>example_csr</ipxact:name>
+  <ipxact:version>0.1</ipxact:version>
+  <ipxact:memoryMaps>
+    <ipxact:memoryMap>
+      <ipxact:name>Example CSR Map</ipxact:name>
+      <ipxact:addressBlock>
+        <ipxact:baseAddress>'h0</ipxact:baseAddress>
+        <ipxact:range>'h40</ipxact:range>
+        <ipxact:width>32</ipxact:width>
+        <ipxact:usage>register</ipxact:usage>
+        <ipxact:register>
+          <ipxact:name>DEVICE_CTRL</ipxact:name>
+          <ipxact:description>Device control register</ipxact:description>
+          <ipxact:addressOffset>'h0</ipxact:addressOffset>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:field>
+            <ipxact:name>ENABLE</ipxact:name>
+            <ipxact:description>Enable bit</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>1</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+        <ipxact:register>
+          <ipxact:name>DEVICE_ADDR</ipxact:name>
+          <ipxact:description>Device address register</ipxact:description>
+          <ipxact:addressOffset>'h4</ipxact:addressOffset>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:field>
+            <ipxact:name>STATIC_ADDR</ipxact:name>
+            <ipxact:description>Static address</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>7</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+        <ipxact:register>
+          <ipxact:name>SLV_EVENT_STATUS</ipxact:name>
+          <ipxact:description>Slave event status</ipxact:description>
+          <ipxact:addressOffset>'h38</ipxact:addressOffset>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:field>
+            <ipxact:name>MRL_UPDATED</ipxact:name>
+            <ipxact:description>MRL updated status</ipxact:description>
+            <ipxact:bitOffset>6</ipxact:bitOffset>
+            <ipxact:bitWidth>1</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+            <ipxact:modifiedWriteValue>oneToClear</ipxact:modifiedWriteValue>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+      </ipxact:addressBlock>
+    </ipxact:memoryMap>
+  </ipxact:memoryMaps>
+</ipxact:component>

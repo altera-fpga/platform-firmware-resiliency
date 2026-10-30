@@ -1,0 +1,23 @@
+property csr_gen_access { type = string; component = field; };
+
+addrmap soc_peripherals {
+    desc = "SoC Peripherals";
+
+    addrmap uart_block {
+        desc = "UART";
+
+        reg {
+            regwidth = 32;
+            field { sw = rw; csr_gen_access = "rw"; } tx[7:0] = 0;
+        } UART_TX @ 0x0;
+    } uart_inst @ 0x0;
+
+    addrmap spi_block {
+        desc = "SPI";
+
+        reg {
+            regwidth = 32;
+            field { sw = rw; csr_gen_access = "rw"; } data[7:0] = 0;
+        } SPI_DATA @ 0x0;
+    } spi_inst @ 0x1000;
+};

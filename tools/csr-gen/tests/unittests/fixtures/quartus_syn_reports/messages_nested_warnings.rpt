@@ -1,0 +1,7 @@
++--------------------+
+; Synthesis Messages ;
++--------------------+
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "s_axi_awaddr[0..31]" is stuck at GND
+    Warning (13410): Pin "s_axi_awvalid" is stuck at GND
+Info: Quartus Prime Synthesis was successful. 0 errors, 3 warnings

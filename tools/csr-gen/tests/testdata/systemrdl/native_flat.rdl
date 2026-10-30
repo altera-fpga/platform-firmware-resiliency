@@ -1,0 +1,22 @@
+// Native third-party-style SystemRDL (no csr-gen UDPs on fields).
+
+addrmap device_map {
+    desc = "Native Flat Device";
+    default regwidth = 32;
+
+    reg {
+        desc = "Control";
+        field { sw = rw; hw = rw; desc = "Enable"; } ENABLE[0:0] = 0;
+        field { sw = r; hw = r; onread = rclr; desc = "Sticky flag"; } STICKY[1:1] = 0;
+    } CTRL @ 0x0;
+
+    external reg {
+        desc = "External FIFO word";
+        field { sw = rw; hw = rw; desc = "Payload"; } DATA[7:0] = 0;
+    } FIFO @ 0x10;
+
+    external reg {
+        desc = "External memory window";
+        field { sw = rw; hw = rw; desc = "Window"; } WINDOW[31:0] = 0;
+    } MEM[4] @ 0x20 += 0x4;
+};

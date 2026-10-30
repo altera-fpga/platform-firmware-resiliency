@@ -1,0 +1,10 @@
+registers:
+  - name: ctrl
+    address: 0x00
+    description: Control register
+    fields:
+      - name: enable
+        msb: 0
+        lsb: 0
+        access: rw
+        reset: 0

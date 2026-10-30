@@ -1,0 +1,7 @@
++--------------------+
+; Synthesis Messages ;
++--------------------+
+Error (17440): Verilog HDL error at csr_registers.sv(17): net type must be explicitly specified
+Error (17440): Verilog HDL error at csr_registers.sv(18): net type must be explicitly specified
+Error (13363): Verilog HDL error at csr_registers.sv(219): module "csr_registers" ignored
+Info: Quartus Prime Synthesis was unsuccessful. 3 errors, 0 warnings

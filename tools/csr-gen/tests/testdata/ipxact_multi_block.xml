@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ipxact:component xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
+  <ipxact:memoryMaps>
+    <ipxact:memoryMap>
+      <ipxact:name>Multi Block Map</ipxact:name>
+      <ipxact:addressBlock>
+        <ipxact:name>alpha_block</ipxact:name>
+        <ipxact:baseAddress>0x1000</ipxact:baseAddress>
+        <ipxact:range>16</ipxact:range>
+        <ipxact:width>32</ipxact:width>
+        <ipxact:register>
+          <ipxact:name>ALPHA_CTRL</ipxact:name>
+          <ipxact:addressOffset>0</ipxact:addressOffset>
+          <ipxact:field>
+            <ipxact:name>EN</ipxact:name>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>1</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+          </ipxact:field>
+        </ipxact:register>
+      </ipxact:addressBlock>
+      <ipxact:addressBlock>
+        <ipxact:name>beta_block</ipxact:name>
+        <ipxact:baseAddress>0x2000</ipxact:baseAddress>
+        <ipxact:range>16</ipxact:range>
+        <ipxact:width>32</ipxact:width>
+        <ipxact:register>
+          <ipxact:name>BETA_STAT</ipxact:name>
+          <ipxact:addressOffset>4</ipxact:addressOffset>
+          <ipxact:field>
+            <ipxact:name>FLAG</ipxact:name>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>1</ipxact:bitWidth>
+            <ipxact:access>read-only</ipxact:access>
+          </ipxact:field>
+        </ipxact:register>
+      </ipxact:addressBlock>
+    </ipxact:memoryMap>
+  </ipxact:memoryMaps>
+</ipxact:component>

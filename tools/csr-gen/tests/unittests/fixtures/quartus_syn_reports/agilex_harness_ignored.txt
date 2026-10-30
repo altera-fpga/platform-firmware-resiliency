@@ -1,0 +1,3 @@
+# Agilex 5 synthesis-only harness defaults.
+Critical Warning (20759): Use the Reset Release IP
+Warning (21620): Design Assistant Results
