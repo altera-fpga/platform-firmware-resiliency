@@ -1,0 +1,21 @@
+property csr_gen_access { type = string; component = field; };
+
+addrmap hierarchical_device {
+    desc = "Hierarchical Regfile Device";
+
+    reg {
+        regwidth = 32;
+        field { sw = rw; csr_gen_access = "rw"; } enable[0:0] = 0;
+    } DIRECT @ 0x0;
+
+    regfile status_bank {
+        reg {
+            regwidth = 32;
+            field { sw = r; csr_gen_access = "ro"; } count[7:0] = 0;
+        } INNER @ 0x0;
+        reg {
+            regwidth = 32;
+            field { sw = r; csr_gen_access = "ro"; } flags[7:0] = 0;
+        } STAT @ 0x4;
+    } bank_inst @ 0x100;
+};

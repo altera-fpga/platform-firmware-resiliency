@@ -1,0 +1,19 @@
+property csr_gen_access { type = string; component = field; };
+
+addrmap nested_device {
+    desc = "Nested Addrmap Device";
+
+    reg {
+        regwidth = 32;
+        field { sw = rw; csr_gen_access = "rw"; } top_ctrl[0:0] = 0;
+    } TOP @ 0x0;
+
+    addrmap child_block {
+        desc = "Child Block";
+
+        reg {
+            regwidth = 32;
+            field { sw = rw; csr_gen_access = "rw"; } child_data[7:0] = 0;
+        } CHILD @ 0x10;
+    } child_inst @ 0x1000;
+};

@@ -1,0 +1,65 @@
+registers:
+  - name: STATUS
+    address: 0x00
+    description: Device ready flag
+    hw_access: internal
+    fields:
+      - name: FLAG
+        msb: 0
+        lsb: 0
+        access: ro
+        reset: 0
+        description: Device ready flag
+  - name: FIFO
+    address: 0x10
+    description: FIFO payload
+    hw_access: external
+    fields:
+      - name: DATA
+        msb: 7
+        lsb: 0
+        access: rw
+        reset: 0
+        description: FIFO payload
+      - name: LEVEL
+        msb: 15
+        lsb: 8
+        access: ro
+        reset: 0
+        description: FIFO fill level
+  - name: MEM
+    address: 0x20
+    address_end: 0x2F
+    description: External read/write memory window
+    hw_access: external
+    fields:
+      - name: WINDOW
+        msb: 31
+        lsb: 0
+        access: rw
+        reset: 0
+        description: External read/write memory window
+  - name: ROM
+    address: 0x30
+    address_end: 0x3F
+    description: External read-only memory window
+    hw_access: external
+    fields:
+      - name: IMAGE
+        msb: 31
+        lsb: 0
+        access: ro
+        reset: 0
+        description: External read-only memory window
+  - name: WBUF
+    address: 0x40
+    address_end: 0x4F
+    description: External write-only memory window
+    hw_access: external
+    fields:
+      - name: BUFFER
+        msb: 31
+        lsb: 0
+        access: wo
+        reset: 0
+        description: External write-only memory window

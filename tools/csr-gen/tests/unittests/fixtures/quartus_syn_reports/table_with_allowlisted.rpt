@@ -1,0 +1,7 @@
++--------------------+
+; Synthesis Messages ;
++--------------------+
+Info: Elaborating from top-level entity "test"
+Critical Warning (20759): Use the Reset Release IP in Agilex 5 designs to ensure a successful configuration.
+Warning (21620): Design Assistant Results: 1 of 1 High severity rules issued violations in snapshot 'partitioned'.
+Info: Quartus Prime Synthesis was successful. 0 errors, 2 warnings

@@ -1,0 +1,16 @@
+/.vscode
+/venv
+/work
+/.pytest_cache
+/.coverage
+/htmlcov
+/build
+tests/end2end/c_header_compile/**/build/
+/dist
+/*.egg-info
+*.egg-info/
+__pycache__/
+*.py[cod]
+
+
+/*.code-workspace

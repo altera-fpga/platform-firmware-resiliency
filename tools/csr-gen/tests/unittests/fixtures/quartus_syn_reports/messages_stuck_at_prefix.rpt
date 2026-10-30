@@ -1,0 +1,4 @@
++--------------------+
+; Synthesis Messages ;
++--------------------+
+    Warning (13410): Pin "s_axi_bresp[0]" is stuck at GND File: /tmp/example/csr_synth_harness.sv Line: 18

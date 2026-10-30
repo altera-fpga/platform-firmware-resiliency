@@ -1,0 +1,12 @@
+# Message line prefixes ignored in output_files/test.syn.rpt (Synthesis Messages).
+# Each non-comment line must match the start of a report message line (leading
+# whitespace in the report is ignored). Add pin-specific stuck-at warnings here.
+
+# Agilex 5 synthesis-only harness (Reset Release IP not instantiated).
+Critical Warning (20759): Use the Reset Release IP
+Warning (21620): Design Assistant Results
+
+# Example floating/unconnected AXI slave inputs (adjust per synthesis results):
+Warning (13024): Output pins are stuck at VCC or GND
+Warning (13410): Pin "s_axi_bresp[0]" is stuck at GND
+Warning (13410): Pin "s_axi_rresp[0]" is stuck at GND

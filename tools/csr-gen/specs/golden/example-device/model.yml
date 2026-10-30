@@ -1,0 +1,33 @@
+registers:
+  - name: CTRL
+    address: 0x00
+    description: Control register
+    fields:
+      - name: ENABLE
+        msb: 0
+        lsb: 0
+        access: rw
+        reset: 0
+        description: Control register
+      - name: MODE
+        msb: 2
+        lsb: 1
+        access: rw
+        reset: 1
+        description: Enable debug mode
+      - name: RSVD
+        msb: 31
+        lsb: 3
+        access: none
+        reset: 0
+        description: Select mode
+  - name: EVENTS
+    address: 0x04
+    description: Event register and pending event bits
+    fields:
+      - name: PENDING
+        msb: 7
+        lsb: 0
+        access: rw1c
+        reset: 0
+        description: Event register and pending event bits

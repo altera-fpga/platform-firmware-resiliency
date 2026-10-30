@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:csrgen="http://csr-gen.dev/ipxact/1.0" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
+  <ipxact:vendor>csr-gen</ipxact:vendor>
+  <ipxact:library>generated</ipxact:library>
+  <ipxact:name>csr_registers</ipxact:name>
+  <ipxact:version>0.1</ipxact:version>
+  <ipxact:memoryMaps>
+    <ipxact:memoryMap>
+      <ipxact:name>csr_registers</ipxact:name>
+      <ipxact:description>CSR Registers</ipxact:description>
+      <ipxact:addressBlock>
+        <ipxact:name>csr_registers</ipxact:name>
+        <ipxact:baseAddress>'h0</ipxact:baseAddress>
+        <ipxact:range>'h8</ipxact:range>
+        <ipxact:width>32</ipxact:width>
+        <ipxact:usage>register</ipxact:usage>
+        <ipxact:register>
+          <ipxact:name>CTRL</ipxact:name>
+          <ipxact:description>Control register</ipxact:description>
+          <ipxact:addressOffset>'h0</ipxact:addressOffset>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:field>
+            <ipxact:name>ENABLE</ipxact:name>
+            <ipxact:description>Control register</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>1</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+          <ipxact:field>
+            <ipxact:name>MODE</ipxact:name>
+            <ipxact:description>Enable debug mode</ipxact:description>
+            <ipxact:bitOffset>1</ipxact:bitOffset>
+            <ipxact:bitWidth>2</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h1</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+          <ipxact:field>
+            <ipxact:name>RSVD</ipxact:name>
+            <ipxact:description>Select mode</ipxact:description>
+            <ipxact:bitOffset>3</ipxact:bitOffset>
+            <ipxact:bitWidth>29</ipxact:bitWidth>
+            <ipxact:access>read-only</ipxact:access>
+            <ipxact:vendorExtensions>
+              <csrgen:access>none</csrgen:access>
+            </ipxact:vendorExtensions>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+        <ipxact:register>
+          <ipxact:name>EVENTS</ipxact:name>
+          <ipxact:description>Event register and pending event bits</ipxact:description>
+          <ipxact:addressOffset>'h4</ipxact:addressOffset>
+          <ipxact:size>32</ipxact:size>
+          <ipxact:access>read-write</ipxact:access>
+          <ipxact:field>
+            <ipxact:name>PENDING</ipxact:name>
+            <ipxact:description>Event register and pending event bits</ipxact:description>
+            <ipxact:bitOffset>0</ipxact:bitOffset>
+            <ipxact:bitWidth>8</ipxact:bitWidth>
+            <ipxact:access>read-write</ipxact:access>
+            <ipxact:modifiedWriteValue>oneToClear</ipxact:modifiedWriteValue>
+            <ipxact:resets>
+              <ipxact:reset>
+                <ipxact:value>'h0</ipxact:value>
+              </ipxact:reset>
+            </ipxact:resets>
+          </ipxact:field>
+        </ipxact:register>
+      </ipxact:addressBlock>
+    </ipxact:memoryMap>
+  </ipxact:memoryMaps>
+</ipxact:component>

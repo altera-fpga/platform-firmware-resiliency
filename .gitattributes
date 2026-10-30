@@ -1,0 +1,10 @@
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.bin.gz filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
+*.sof filter=lfs diff=lfs merge=lfs -text
+*.jic filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.pof filter=lfs diff=lfs merge=lfs -text
+*.rbf filter=lfs diff=lfs merge=lfs -text
